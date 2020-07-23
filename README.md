@@ -1,8 +1,8 @@
 # entity-validation
-Exploring entity validation; it has severl issues that need to be answered.
+Exploring entity validation; answring several issues.
 
-## @Validated vs @Valid
+### @Validated vs @Valid
 
-## Catch Jpa constrain violation exceptions. 
+### Catch a constrain violation exception instead of its wrapper exception. 
 
-## Json deseriablize TimeStamp in a correct format. 
+### Json deseriablize TimeStamp in a correct format. 
