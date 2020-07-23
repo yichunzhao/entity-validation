@@ -15,4 +15,4 @@ Hibernate exceptions are caught and wrapped in a Spring exception.
 
 ### Json deseriablize TimeStamp in a correct format. 
 
-Java Date especially timeStamp is not deserialized correctly by JSON. 
+Java Date especially timeStamp is not serialized correctly by JSON. 
