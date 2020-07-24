@@ -7,9 +7,9 @@ Starting from with boot 2.3, we need to explicitly add the spring-boot-starter-v
 @Validated: Spring annotation
 @Valid: Java annotation
 
-Both can be applied on the class, method, and argumen parameter levels. 
+Both can be applied on the class, method, and method argument levels. 
 
-Difference? 
+What difference? 
 
 ### Catch a constrain violation exception
 
