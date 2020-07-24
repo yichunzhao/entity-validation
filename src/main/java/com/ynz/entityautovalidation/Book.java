@@ -1,6 +1,5 @@
 package com.ynz.entityautovalidation;
 
-import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
