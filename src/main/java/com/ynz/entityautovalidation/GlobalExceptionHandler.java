@@ -22,7 +22,7 @@ public class GlobalExceptionHandler {
      * Tuning exception handlers may need several iterations.
      */
     @ExceptionHandler
-    public ResponseEntity<List<String>> handleConstrainViolationException(TransactionSystemException e) {
+    public ResponseEntity<List<String>> handleTransactionSystemException(TransactionSystemException e) {
         List<String> errors = new ArrayList<>();
         String message = null;
 
