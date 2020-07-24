@@ -33,7 +33,7 @@ public class Book {
     private Long version;
 
     @NotNull(message = "Book must has a title.")
-    @Size(min = 5, max = 20)
+    @Size(min = 5, max = 20, message = "Title length should between 5 and 20.")
     private String title;
 
     @NotNull(message = "Book must has a publishing date.")

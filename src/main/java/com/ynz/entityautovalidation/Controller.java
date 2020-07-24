@@ -13,6 +13,7 @@ import javax.validation.Valid;
 @RestController
 @RequestMapping("books")
 @RequiredArgsConstructor
+@Valid
 public class Controller {
     private final BookRepository bookRepository;
 
@@ -29,7 +30,6 @@ public class Controller {
      *  A constrain group is validated before B constrain group.
      */
     @PostMapping("")
-    @Valid
     public Book createBook(@RequestBody Book book) {
         return bookRepository.save(book);
     }
