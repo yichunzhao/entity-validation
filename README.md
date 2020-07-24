@@ -1,8 +1,19 @@
-# entity-validation
-Exploring entity validation; it has severl issues that need to be answered.
+## entity-validation
+Exploring entity validation; answering several issues.
 
-## @Validated vs @Valid
+Starting from with boot 2.3, we need to explicitly add the spring-boot-starter-validation dependency.
 
-## Catch Jpa constrain violation exceptions. 
+### @Validated vs @Valid
+@Validated: Spring annotation
 
-## Json deseriablize TimeStamp in a correct format. 
+@Valid: Java annotation
+
+
+### Catch a constrain violation exception
+
+Hibernate exceptions are caught and wrapped in a Spring exception. 
+How to catch the specific constrain violation exception.
+
+### Json deseriablize TimeStamp in a correct format. 
+
+Java Date especially timeStamp is not serialized correctly by JSON. 
