@@ -12,11 +12,13 @@ Both can be applied on the class, method, and method argument levels.
 What difference? 
 
 ### Catch a constrain violation exception
-
+When putting @Valid on the class and method level,
 Hibernate exceptions are caught and wrapped in a Spring exception. 
 
 ConstrainViolationExeption is wrapped in RollBackExpetion, which is wrapped in Spring TransactionSystemException.
 How to catch the specific constrain violation exception.
+
+When putting @Valid before method argument parameter, Spring boot throws a MethodArgumentNotValidException.
 
 ### Json deseriablize TimeStamp in a correct format. 
 
