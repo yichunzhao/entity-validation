@@ -11,6 +11,8 @@ Both can be applied on the class, method, and method argument levels.
 
 What difference? 
 
+@@Validated may validate group constraints. 
+
 ### Catch a constrain violation exception
 When putting @Valid on the class and method level,
 Hibernate exceptions are caught and wrapped in a Spring exception. 
