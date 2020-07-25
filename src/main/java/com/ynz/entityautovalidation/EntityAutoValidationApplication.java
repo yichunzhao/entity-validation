@@ -11,6 +11,7 @@ import java.util.Date;
 @RequiredArgsConstructor
 public class EntityAutoValidationApplication implements CommandLineRunner {
     private final BookRepository bookRepository;
+    private final AuthorRepository authorRepository;
 
     public static void main(String[] args) {
         SpringApplication.run(EntityAutoValidationApplication.class, args);
@@ -25,5 +26,9 @@ public class EntityAutoValidationApplication implements CommandLineRunner {
         book.setPublishingDate(date);
 
         bookRepository.save(book);
+
+        Author author = Author.builder().email("xxx@email.com").name("Evan").build();
+        authorRepository.save(author);
+
     }
 }

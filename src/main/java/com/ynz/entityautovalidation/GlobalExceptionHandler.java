@@ -3,6 +3,7 @@ package com.ynz.entityautovalidation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.TransactionSystemException;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -15,6 +16,7 @@ import java.util.List;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
     public static final String VIOLATION_ERR_MSG = "There are constraint violation errors.";
+    public static final String METHOD_ARG_INVALID_MSG = "Handler method argument constraint violation errors";
 
     /**
      * Jpa and Hibernate constraint violation exception is wrapped in the TransactionSystemException.
@@ -40,6 +42,15 @@ public class GlobalExceptionHandler {
                         .forEach(constraintViolation -> errors.add(constraintViolation.getMessage()));
             }
         }
+
+        return new ResponseEntity(new ApiError(HttpStatus.BAD_REQUEST, message, errors), HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler
+    public ResponseEntity<List<String>> handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
+        List<String> errors = new ArrayList<>();
+        String message = METHOD_ARG_INVALID_MSG;
+        e.getBindingResult().getAllErrors().forEach(err -> errors.add(err.getDefaultMessage()));
 
         return new ResponseEntity(new ApiError(HttpStatus.BAD_REQUEST, message, errors), HttpStatus.BAD_REQUEST);
     }
