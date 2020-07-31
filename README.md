@@ -10,8 +10,11 @@ Starting from with boot 2.3, we need to explicitly add the spring-boot-starter-v
 Both can be applied on the class, method, and method argument levels. 
 
 What difference? 
+@Valid marks property, method parameters or turn type for validation cascading.
 
+@Validated used in Spring MVC, marks class, nmethod arguments
 @Validated may validate group constraints. 
+
 
 ### Catch a constrain violation exception
 When putting @Valid on the class and method level,
