@@ -12,9 +12,7 @@ Both can be applied on the class, method, and method argument levels.
 What difference? 
 @Valid marks property, method parameters or return type for validation cascading.
 
-@Validated used in Spring MVC, marks class, nmethod arguments
-
-@Validated may validate group constraints. 
+@Validated used in Spring MVC, marks class, method arguments; validate group constraints. 
 
 
 ### Catch a constrain violation exception
